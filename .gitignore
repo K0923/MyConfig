@@ -1,0 +1,13 @@
+clash/
+coc/
+fish/
+*.swp
+.DS_Store
+nvim/view/
+nvim/plugged/
+nvim/sessions/
+nvim/autoload/plug.vim.old
+nvim/tmp/
+nvim/.netrwhist
+nvim/_machine_specific.vim
+nvim/.vim-bookmarks
