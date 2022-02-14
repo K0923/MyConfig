@@ -11,4 +11,5 @@ nvim/tmp/
 nvim/.netrwhist
 nvim/_machine_specific.vim
 nvim/.vim-bookmarks
-ranger/plugins/*
+ranger/plugins/
+neofetch/
