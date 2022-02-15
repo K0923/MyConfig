@@ -235,6 +235,11 @@ Plug 'honza/vim-snippets'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
+"snazzy
+Plug 'connorholyday/vim-snazzy'
+
+"Tailwindcc
+Plug 'rodrigore/coc-tailwind-intellisense', {'do': 'npm install'}
 
 " Which-key
 " Vim Script
@@ -335,6 +340,9 @@ endfunction
 xmap <leader>a  <Plug>(coc-codeaction-selected)
 nmap <leader>aw <Plug>(coc-codeaction-selected)
 
+"snazzy
+"color snazzy
+"let g:SnazzyTransparent =  2
 
 "coc-extentions"
 let g:coc_global_extensions = [
