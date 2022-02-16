@@ -1,9 +1,9 @@
 syntax on 
 
-let g:mapleader="`"
-
+let g:mapleader=" "
 
 set number
+set relativenumber
 set cursorline
 set wrap
 set showcmd
@@ -55,6 +55,7 @@ noremap K 5j
 noremap J 5h
 noremap L 5l
 
+imap jk <ESC>
 
 noremap - nzz
 noremap = Nzz
@@ -228,7 +229,7 @@ Plug 'kana/vim-textobj-user'
 Plug 'fadein/vim-FIGlet'
 
 " Snippets
-" Plug 'SirVer/ultisnips'
+Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 
 " FZF
@@ -241,17 +242,16 @@ Plug 'connorholyday/vim-snazzy'
 "Tailwindcc
 Plug 'rodrigore/coc-tailwind-intellisense', {'do': 'npm install'}
 
-" Which-key
-" Vim Script
-" Plug 'folke/which-key.nvim'
-"
-" lua << EOF
-"   require("which-key").setup {
-"     -- your configuration comes here
-"     -- or leave it empty to use the default settings
-"     -- refer to the configuration section below
-"   }
-" EOF
+" Treesitter
+Plug 'nvim-treesitter/nvim-treesitter'
+Plug 'nvim-treesitter/playground'
+
+" Pretty Dress
+Plug 'theniceboy/nvim-deus'
+
+" Status line
+Plug 'theniceboy/eleline.vim'
+Plug 'ojroques/vim-scrollstatus'
 
 call plug#end()
 
@@ -293,7 +293,7 @@ endfunction
 
 " Use <c-space> to trigger completion.
 if has('nvim')
-  inoremap <silent><expr> <C-o> coc#refresh()
+  inoremap <silent><expr> <c-o> coc#refresh()
 else
   inoremap <silent><expr> <c-o> coc#refresh()
 endif
@@ -390,7 +390,6 @@ noremap <silent> <leader>tk :CocList tasks<CR>
 
 
 
-
 let g:terminal_color_0  = '#000000'
 let g:terminal_color_1  = '#FF5555'
 let g:terminal_color_2  = '#50FA7B'
@@ -410,6 +409,34 @@ let g:terminal_color_14 = '#9AEDFE'
 
 " the silver searcher
 let g:ackprg = 'ag --nogroup --nocolor --column'
+
+" NerdTree
+map tt :NERDTreeToggle<CR>
+
+"python syntax
+let g:python_highlight_all = 1
+
+" vim-indent-guide
+let g:indent_guides_gudie = 1
+let g:indent_guides_start_level =  2
+let g:indent_guides_enable_on_vim_startup =  1
+silent! unmap <LEADER>ig
+autocmd WinEnter * silent! unmap <Leader>ig
+
+map <Leader>gy :Goyo<CR> 
+
+" spell check 
+map <LEADER>sc :set spell!<CR>
+
+" No tmux found! placeholder
+map <leader><leader> <Esc>/<++><CR>:nohlsearch<CR>c4l
+
+" UltiSnips
+let g:UltiSnipsJumpForwardTrigger = "<c-k>"
+let g:UltiSnipsExpandTrigger = "<c-e>"
+
+
+
 
 
 
