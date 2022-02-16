@@ -168,11 +168,18 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'wellle/tmux-complete.vim'
 
 " File navigation
-Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
-Plug 'Xuyuanp/nerdtree-git-plugin'
+"Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+"Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'junegunn/fzf', { 'do': {-> fzf#install() }}
+Plug 'junegunn/fzf.vim'
+Plug 'Yggdroot/LeaderF', { 'do': ':LeaderfInstallCExtension' }
+Plug 'majutsushi/tagbar', { 'on': 'TagbarOpenAutoClose' }
+Plug 'kevinhwang91/rnvimr'
+Plug 'airblade/vim-rooter'
+Plug 'pechorin/any-jump.vim'
 
 " Taglist
-Plug 'majutsushi/tagbar', { 'on': 'TagbarOpenAutoClose' }
+Plug 'liuchengxu/vista.vim'
 
 " Error checking
 Plug 'w0rp/ale'
@@ -197,23 +204,74 @@ Plug 'cohama/agit.vim'
 Plug 'kdheepak/lazygit.nvim'
 
 " HTML, CSS, JavaScript, PHP, JSON, etc.
+Plug 'neoclide/jsonc.vim'
 Plug 'elzr/vim-json'
-Plug 'hail2u/vim-css3-syntax'
-Plug 'spf13/PIV', { 'for' :['php', 'vim-plug'] }
-Plug 'gko/vim-coloresque', { 'for': ['vim-plug', 'php', 'html', 'javascript', 'css', 'less'] }
+" Plug 'hail2u/vim-css3-syntax'
+Plug 'othree/html5.vim'
+Plug 'alvan/vim-closetag'
+
+" Plug 'gko/vim-coloresque', { 'for': ['vim-plug', 'php', 'html', 'javascript', 'css', 'less'] }
 Plug 'pangloss/vim-javascript', { 'for' :['javascript', 'vim-plug'] }
 Plug 'mattn/emmet-vim'
+Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 
 " Python
-Plug 'vim-scripts/indentpython.vim'
+Plug 'Vimjas/vim-python-pep8-indent', { 'for' :['python', 'vim-plug'] }
+Plug 'numirias/semshi', { 'do': ':UpdateRemotePlugins', 'for' :['python', 'vim-plug'] }
+"Plug 'vim-scripts/indentpython.vim', { 'for' :['python', 'vim-plug'] }
+"Plug 'plytophogy/vim-virtualenv', { 'for' :['python', 'vim-plug'] }
+Plug 'tweekmonster/braceless.vim', { 'for' :['python', 'vim-plug'] }
+
 
 " Markdown
-Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install_sync() }, 'for' :['markdown', 'vim-plug'] }
-Plug 'dhruvasagar/vim-table-mode', { 'on': 'TableModeToggle' }
-Plug 'vimwiki/vimwiki'
+Plug 'suan/vim-instant-markdown', {'for': 'markdown'}
+Plug 'dhruvasagar/vim-table-mode', { 'on': 'TableModeToggle', 'for': ['text', 'markdown', 'vim-plug'] }
+Plug 'mzlogin/vim-markdown-toc', { 'for': ['gitignore', 'markdown', 'vim-plug'] }
+Plug 'dkarter/bullets.vim'
+
+" Editor Enhancement
+"Plug 'Raimondi/delimitMate'
+Plug 'jiangmiao/auto-pairs'
+Plug 'mg979/vim-visual-multi'
+Plug 'tomtom/tcomment_vim' " in <space>cn to comment a line
+Plug 'theniceboy/antovim' " gs to switch
+Plug 'tpope/vim-surround' " type yskw' to wrap the word with '' or type cs'` to change 'word' to `word`
+Plug 'gcmt/wildfire.vim' " in Visual mode, type k' to select all text in '', or type k) k] k} kp
+Plug 'junegunn/vim-after-object' " da= to delete what's after =
+Plug 'godlygeek/tabular' " ga, or :Tabularize <regex> to align
+Plug 'tpope/vim-capslock' " Ctrl+L (insert) to toggle capslock
+Plug 'easymotion/vim-easymotion'
+" Plug 'Konfekt/FastFold'
+"Plug 'junegunn/vim-peekaboo'
+"Plug 'wellle/context.vim'
+Plug 'svermeulen/vim-subversive'
+Plug 'theniceboy/argtextobj.vim'
+Plug 'rhysd/clever-f.vim'
+Plug 'AndrewRadev/splitjoin.vim'
+Plug 'theniceboy/pair-maker.vim'
+Plug 'theniceboy/vim-move'
+" Plug 'jeffkreeftmeijer/vim-numbertoggle'
+Plug 'Yggdroot/indentLine'
+
+" For general writing
+Plug 'junegunn/goyo.vim'
+"Plug 'reedes/vim-wordy'
+"Plug 'ron89/thesaurus_query.vim'
 
 " Bookmarks
-Plug 'kshenoy/vim-signature'
+" Plug 'kshenoy/vim-signature'
+
+" Find & Replace
+Plug 'brooth/far.vim', { 'on': ['F', 'Far', 'Fardo'] }
+
+" Mini Vim-APP
+"Plug 'jceb/vim-orgmode'
+"Plug 'mhinz/vim-startify'
+Plug 'skywind3000/asynctasks.vim'
+Plug 'skywind3000/asyncrun.vim'
+
+" Vim Applications
+Plug 'itchyny/calendar.vim'
 
 " Other useful utilities
 Plug 'terryma/vim-multiple-cursors'
@@ -228,13 +286,15 @@ Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'kana/vim-textobj-user'
 Plug 'fadein/vim-FIGlet'
 
+" Other visual enhancement
+Plug 'luochen1990/rainbow'
+Plug 'mg979/vim-xtabline'
+Plug 'ryanoasis/vim-devicons'
+Plug 'wincent/terminus'
+
 " Snippets
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
-
-" FZF
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
 
 "snazzy
 Plug 'connorholyday/vim-snazzy'
@@ -436,7 +496,29 @@ let g:UltiSnipsJumpForwardTrigger = "<c-k>"
 let g:UltiSnipsExpandTrigger = "<c-e>"
 
 
+" ===
+" === Dress up my vim
+" ===
+"set termguicolors " enable true colors support
+let $NVIM_TUI_ENABLE_TRUE_COLOR=2
+"set background=dark
+"let ayucolor="mirage"
+"let g:oceanic_next_terminal_bold = 1
+"let g:oceanic_next_terminal_italic = 1
+"let g:one_allow_italics = 1
 
+"color dracula
+"color one
+color deus
+"color gruvbox
+"let ayucolor="light"
+"color ayu
+"color xcodelighthc
+"set background=light
+"set cursorcolumn
+
+hi NonText ctermfg=gray guifg=grey10
+"hi SpecialKey ctermfg=blue guifg=grey70
 
 
 
