@@ -266,7 +266,7 @@ Plug 'brooth/far.vim', { 'on': ['F', 'Far', 'Fardo'] }
 
 " Mini Vim-APP
 "Plug 'jceb/vim-orgmode'
-"Plug 'mhinz/vim-startify'
+Plug 'mhinz/vim-startify'
 Plug 'skywind3000/asynctasks.vim'
 Plug 'skywind3000/asyncrun.vim'
 
@@ -297,7 +297,7 @@ Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 
 "snazzy
-Plug 'connorholyday/vim-snazzy'
+"Plug 'connorholyday/vim-snazzy'
 
 "Tailwindcc
 Plug 'rodrigore/coc-tailwind-intellisense', {'do': 'npm install'}
@@ -483,7 +483,7 @@ let g:indent_guides_enable_on_vim_startup =  1
 silent! unmap <LEADER>ig
 autocmd WinEnter * silent! unmap <Leader>ig
 
-map <Leader>gy :Goyo<CR> 
+map <Leader>gy :Goyo<CR>
 
 " spell check 
 map <LEADER>sc :set spell!<CR>
